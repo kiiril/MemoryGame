@@ -1,0 +1,72 @@
+html{
+  	background: url(pres.png) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	font-family: "Times New Roman", Times, serif;
+}
+
+h1{
+	position: relative;
+	font-size: 3.75em;
+	margin-top: 0.55em;
+	text-align: center;
+	color: rgb(35, 45, 136);
+}
+
+#england{
+	position: absolute;
+	font-weight: bold;
+	font-style: italic;
+	left: 60%;
+	top: 9%;
+	font-size: 1.8em;
+	color: rgb(189, 83, 96);
+	text-decoration: underline;
+}
+div{
+	margin-top: 10%;
+}
+
+.menu{
+	background-color: whitesmoke;
+	position: relative;
+	left: 34%;
+	font-size: 2em;
+	font-weight: bold;
+	border: 1px solid black;
+	border-radius: 1em;
+	margin: 1em;
+	height: 2em;
+	width: 12em;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    text-decoration-line: none;
+	color: black;
+}
+
+.menu:hover{
+	background-color: #ffda95;
+}
+
+@keyframes movement{
+	from {left: 25em}
+	to {left: 60em}
+}
+
+#bus{
+	position: absolute;
+	width: 5em;
+	height: 4em;
+	left: 25em;
+	bottom: 1.5em;
+	animation-name: movement;
+	animation-duration: 8s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+}
+
+

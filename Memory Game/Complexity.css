@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0; /* remove default margin */
+  padding: 0; /* remove default padding */
+}
+
+body{
+  background-image: url("bridge.png");
+  background-size: cover;
+  font-family: "Times New Roman", sans-serif;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#heading {
+  text-align: center;
+  margin-top: 3vw;
+  font-family: 'American Frights', sans-serif;
+  font-size: 3em;
+}
+
+.wrapper {
+  width: 90%;
+  height: 45vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.level {
+  margin: 0.8em;
+  position: relative;
+  display: inline-block;
+  height: 80%;
+  width: 30%;
+}
+
+.block {
+  border: 1px solid black;
+  position: relative;
+  height: 70%;
+  width: 80%;
+  margin: auto;
+  margin-top: 1em;
+  border-radius: 5px;
+  background-color: orange;
+}
+
+.level_label {
+  position: relative;
+  color: black;
+  border: 1px solid black;
+  height: 10%;
+  width: 80%;
+  justify-content: center;
+  margin:auto;
+  margin-top: 1em;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: violet;
+  overflow: hidden;
+  font-weight: bold;
+  background-color: #e1d9be;
+  font-family: 'American Frights', sans-serif;
+  font-size: 1.5em;
+}
+
+
+.hidden_text {
+  position: absolute;
+  border: 1px solid black;
+  height: 10%;
+  width: 80%;
+  top: 22em;
+  margin: 0.69em 2.15em;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  top: 22em;
+  transition: opacity 1s ease-in-out;
+  font-weight: bold;
+}
+
+.hidden_text:hover {
+  opacity: 1;
+}
+
+#easy {
+  background-color: #93c572;
+}
+
+#medium {
+  background-color: #FF8243;
+}
+
+#hard {
+  background-color: #D53032;
+}
+
+#back{
+	font-size: 3em;
+	position: absolute;
+	top: 13.2em;
+	margin-left: 0.1em;
+	text-decoration-line: none;
+	color: black;
+}
+
+
+
+/*.hidden_text:hover {
+
+}*/

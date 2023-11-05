@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="medium_level.css">
+	<link href="https://fonts.cdnfonts.com/css/alarm-clock" rel="stylesheet">
+	<link href="https://fonts.cdnfonts.com/css/american-frights" rel="stylesheet">
+</head>
+<body>
+
+
+	<div class="back-wrapper">
+		<div id="victory" class='notification'>
+			<img id="crown" src="images/crown.png" alt="crown">
+			<img id="queen" src="images/queen.png" alt="queen">
+			<img id="tag" src="images/tag.png" alt="tag">
+			<span id="additional_points"></span>
+			<div id="victory_label">
+				<span>You win</span>
+			</div>
+			<div class="stars_block">
+				<img id="one_star" src="" alt="star">
+				<img id="two_stars" src="" alt="star">
+				<img id="three_stars" src="" alt="star">
+			</div>
+			<span id="score_label">Your score</span>
+			<div class="block_result" id="block_score">
+
+			</div>
+			<span id="time_label">Your time</span>
+			<div class="block_result" id="block_time">
+			</div>
+
+			<a href="TitlePage.html"><button type="button" id="home_button"><span class="buttons">&#127968; Home</span></button></a>
+			<button type="button" id="restart_button" onclick="restart_game()"><span class="buttons">&#8634; Restart</span></button>
+		</div>
+
+
+		<div id="lose" class='notification'>
+			<div id="lose_label">
+				<span>You Lose</span>
+			</div>
+			<img id="sir" src="images/sir.png" alt="sir">
+			<span id="text"> You are the shame of<br> British society!<br>Do your best!</span>
+			<img src="images/thoughts.png" alt="cloud" id="cloud">
+			<div class="lose_menu">
+				<a href="TitlePage.html"><button type="button" id="home_button2"><span class="buttons">&#127968; Home</span></button></a>
+				<button type="button" id="restart_button2" onclick="restart_game()"><span class="buttons">&#8634; Restart</span></button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<p id="score_name">Score: 0</p>
+	<p id="timer_name">Time</p>
+	<p id="timer">00:00</p>
+	<p id="tries_name">Moves: 65</p>
+
+	<div class="wrapper">
+		<ul class="cards">
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-1.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-1.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-2.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-2.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-3.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-3.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-4.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-4.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-5.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-5.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-6.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-6.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-7.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-7.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-8.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-8.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-1.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-1.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-2.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-2.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-3.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-1.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-1.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-2.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-2.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-3.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-1.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-1.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-2.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-2.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-3.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-1.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-1.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-2.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-2.jpeg" alt="card-img">
+				</div>
+			</li>
+			<li class="card">
+				<div class="view front-view">
+					<span class="material_icons">?</span>
+				</div>
+				<div class="view back-view">
+					<img src="images/img-3.jpeg" alt="card-img">
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<a href="TitlePage.html" id="back">&#x2B05;</a>
+	<script>
+	const cards = document.getElementsByClassName("card");
+
+	var cardOne, cardTwo;
+	var matchedPairs = 0;
+	var timerInterval;
+	var totalSeconds = 0;
+	var movesNumber = 65;
+	var clickCounter = 0;
+	var score = 0;
+
+	function flipCard(event) {
+		if (movesNumber == 0) {
+			clearInterval(timerInterval);
+			document.getElementsByClassName('back-wrapper')[0].style.visibility = "visible";
+			document.getElementById('lose').style.visibility = "visible"
+			setTimeout(function() {
+				document.getElementById('lose').style.animationName = "emersion";
+				document.getElementById('lose').style.animationDuration = "0.5s";
+			}, 1000);
+			return;
+		}
+		if (clickCounter == 0) startTimer();
+		let clickedCard = event.target;
+		clickCounter++;
+		if(clickedCard !== cardOne) {
+			clickedCard.classList.add("flip");
+			if(!cardOne){
+				cardOne = clickedCard;
+				return cardOne;
+			}
+			cardTwo = clickedCard;
+			movesNumber--;
+			document.getElementById('tries_name').innerHTML = "Moves: "+movesNumber;
+			let selected_1 = cardOne.getElementsByTagName("img");
+			let selected_2 = cardTwo.getElementsByTagName("img");
+			match(selected_1, selected_2);
+		}
+
+
+		function match(firstCard, secondCard) {
+			if (firstCard[0].src == secondCard[0].src) {
+				matchedPairs++;
+				score+=100;
+				document.getElementById('score_name').innerHTML = "Score: "+score;
+				if (matchedPairs == 18) {
+					clearInterval(timerInterval);
+					document.getElementsByClassName('back-wrapper')[0].style.visibility = "visible";
+					document.getElementById('victory').style.visibility = "visible";
+					if (totalSeconds <= 150){
+						document.getElementById('one_star').src = "images/gold_star.png";
+						document.getElementById('two_stars').src = "images/gold_star.png";
+						document.getElementById('three_stars').src = "images/gold_star.png";
+					} else if (totalSeconds <= 180) {
+						document.getElementById('one_star').src = "images/gold_star.png";
+						document.getElementById('two_stars').src = "images/gold_star.png";
+						document.getElementById('three_stars').src = "images/star.png";
+					} else {
+						document.getElementById('one_star').src = "images/star.png";
+						document.getElementById('two_stars').src = "images/star.png";
+						document.getElementById('three_stars').src = "images/star.png";
+					}
+					setTimeout(function() {
+						document.getElementById('victory').style.animationName = "emersion";
+						document.getElementById('victory').style.animationDuration = "0.5s";
+						document.getElementById('block_time').innerHTML = makeTimerText(totalSeconds);
+						let additionalPoints = movesNumber*150;
+						document.getElementById('additional_points').innerHTML = "+" + additionalPoints;
+						document.getElementById('block_score').innerHTML = score + additionalPoints;
+					}, 1000);
+
+				}
+				cardOne.removeEventListener("click", flipCard);
+				cardTwo.removeEventListener("click", flipCard);
+				cardOne = undefined;
+				cardTwo = undefined;
+				return;
+			}
+			setTimeout(function(){
+				cardOne.classList.add("shake");
+				cardTwo.classList.add("shake");
+			}, 400);
+
+			setTimeout(function(){
+				cardOne.classList.remove("shake");
+				cardOne.classList.remove("flip");
+				cardTwo.classList.remove("shake");
+				cardTwo.classList.remove("flip");
+				cardOne = undefined;
+				cardTwo = undefined;
+			}, 1200);
+		}
+	}
+
+	function shuffle() {
+		matchedPairs = 0;
+		let index_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+		15, 16, 17, 18];
+		index_arr.sort(() => (Math.random() > 0.5) ? 1 : -1);
+		for (let i=0; i<cards.length; i++) {
+			cards[i].classList.remove("flip");
+			let img = cards[i].querySelector("img");
+			img.src = `images/img-${index_arr[i]}.jpg`;
+			cards[i].addEventListener("click", flipCard);
+		}
+	}
+
+
+	function makeTimerText(sec) {
+
+		let minutes = Math.floor(sec / 60);
+		let seconds = sec % 60;
+
+		if (seconds < 10) {
+			seconds = "0" + seconds;
+		}
+
+		if (minutes < 10) {
+			minutes = "0" + minutes;
+		}
+
+		return minutes+":"+seconds;
+	}
+
+
+	function startTimer() {
+		timerInterval = setInterval(function() {
+			totalSeconds++;
+			let timer = document.getElementById('timer');
+			timer.innerHTML = makeTimerText(totalSeconds);
+		}, 1000);
+	}
+
+
+
+	function restart_game() {
+		document.getElementsByClassName('back-wrapper')[0].style.visibility = "hidden";
+		document.getElementById('victory').style.visibility = "hidden";
+		document.getElementById('lose').style.visibility = "hidden";
+		shuffle();
+		score = 0;
+		movesNumber = 65;
+		totalSeconds = 0;
+		clickCounter = 0;
+		document.getElementById('timer').innerHTML = makeTimerText(totalSeconds);
+		document.getElementById('tries_name').innerHTML = "Moves: " + movesNumber;
+		document.getElementById('score_name').innerHTML = "Score: " + score;
+		document.getElementById('victory').style.animationName = "";
+		document.getElementById('victory').style.animationDuration = "";
+		document.getElementById('lose').style.animationName = "";
+		document.getElementById('lose').style.animationDuration = "";
+	}
+
+	for(let i=0; i<cards.length; i++){
+		cards[i].addEventListener("click", flipCard);
+	}
+
+	shuffle();
+
+
+	</script>
+</body>
+</html>
